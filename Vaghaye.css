@@ -1,0 +1,154 @@
+/* Vaghaye.css - استایل مخصوص حالت گرید (بالای 900px) */
+
+/* فاصله 10% از کناره‌ها */
+.vaghaye-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0;
+  direction: rtl;
+}
+
+/* بخش بالایی */
+.vaghaye-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 100px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--border, #e5e4e7);
+  background: transparent;
+}
+
+.vaghaye-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-h, #08060d);
+  margin: 0;
+}
+
+.vaghaye-btn {
+  background: transparent;
+  border: 1px solid var(--border, #e5e4e7);
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--accent, #ffff);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.vaghaye-btn:hover {
+  background: var(--accent-bg, rgba(170, 59, 255, 0.1));
+  transform: scale(1.05);
+}
+
+/* گرید 4 تایی */
+.vaghaye-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* استایل کارت */
+.vaghaye-card {
+  background: var(--bg, #fff);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: var(--shadow, 0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.vaghaye-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* تصویر */
+.vaghaye-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* محتوای کارت */
+.vaghaye-card-content {
+  padding: 16px;
+  text-align: right;
+}
+
+/* عنوان روز (سمت راست) */
+.vaghaye-card-day {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent, #ffff);
+  margin-bottom: 8px;
+  text-align: right;
+}
+
+/* خلاصه متن */
+.vaghaye-card-summary {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text, #6b6375);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* پشتیبانی از دارک مود */
+@media (prefers-color-scheme: dark) {
+  .vaghaye-card {
+    background: var(--bg, #16171d);
+  }
+  
+  .vaghaye-card-day {
+    color: var(--accent, #ffff);
+  }
+  
+  .vaghaye-card-summary {
+    color: var(--text, #9ca3af);
+  }
+  
+  .vaghaye-title {
+    color: var(--text-h, #f3f4f6);
+  }
+}
+
+/* responsive برای حالت گرید (بالای 900px اینها اعمال می‌شوند) */
+@media (max-width: 1200px) and (min-width: 901px) {
+  .vaghaye-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .vaghaye-container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 900px) {
+  /* این استایل‌ها برای زیر 900px مخفی می‌کنیم */
+  .vaghaye-container {
+    display: none;
+  }
+  .vaghaye-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 100px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--border, #e5e4e7);
+  background: transparent;
+  width: 105%;
+  font-style: 1rem;
+}
+}

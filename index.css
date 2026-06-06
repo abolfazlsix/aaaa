@@ -1,0 +1,401 @@
+/* index.css - حذف var و استفاده از رنگ مستقیم */
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #ffffff;
+  --border: #e5e4e7;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e5e5e5;
+    --text-h: #ffffff;
+    --bg: #1a1a2e;
+    --border: #2d2d44;
+    --accent: #ffff;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  background-color: var(--bg);
+}
+/* index.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg, #fff);
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+#root {
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+@media (max-width: 900px) {
+  #root {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding-top: 60px;
+  }
+}
+
+/* برای اسکرول نرم به بخش‌ها */
+html {
+  scroll-behavior: smooth;
+}
+
+/* فضای خالی برای هدر fixed */
+#root {
+  padding-top: 100px;
+}
+
+/* برای اینکه هدر روی بخش‌ها سایه نیندازد */
+section {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 900px) {
+  #root {
+    padding-top: 85px;
+  }
+  section {
+    scroll-margin-top: 85px;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding-top: 75px;
+  }
+  section {
+    scroll-margin-top: 75px;
+  }
+}
+/* برای اسکرول نرم */
+html {
+  scroll-behavior: smooth;
+}
+
+/* فضای خالی برای هدر fixed */
+#root {
+  padding-top: 100px;
+}
+
+/* برای جلوگیری از تداخل هدر با بخش‌ها */
+#vaghaye, #zendegi, #help {
+  scroll-margin-top: 80px;
+}
+/* index.css یا App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0d0d1a;
+}
+
+#root {
+  min-height: 100vh;
+  background: #0d0d1a;
+}
+
+/* حذف padding-top از #root */
+/* #root {
+  padding-top: 0;
+} */
+ /* index.css */
+
+/* تعریف فونت Shoor */
+@font-face {
+  font-family: 'Shoor';
+  src: url('./assets/fonts/Shoor-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shoor';
+  src: url('./assets/fonts/Shoor-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shoor';
+  src: url('./assets/fonts/Shoor-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shoor';
+  src: url('./assets/fonts/Shoor-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shoor';
+  src: url('./assets/fonts/Shoor-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* تعریف فونت ShoorRounded */
+@font-face {
+  font-family: 'ShoorRounded';
+  src: url('./assets/fonts/ShoorRounded-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ShoorRounded';
+  src: url('./assets/fonts/ShoorRounded-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ShoorRounded';
+  src: url('./assets/fonts/ShoorRounded-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ShoorRounded';
+  src: url('./assets/fonts/ShoorRounded-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ShoorRounded';
+  src: url('./assets/fonts/ShoorRounded-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* اعمال فونت به کل سایت */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Shoor', 'ShoorRounded', system-ui, -apple-system, sans-serif;
+  background: #0d0d1a;
+  color: #ffffff;
+  direction: rtl;
+}
+
+/* استایل‌های عمومی */
+#root {
+  min-height: 100vh;
+  background: #0d0d1a;
+}
+
+/* کلاس‌های کمکی فونت */
+.font-shoor {
+  font-family: 'Shoor', sans-serif;
+}
+
+.font-shoor-rounded {
+  font-family: 'ShoorRounded', sans-serif;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+/* اسکرول روان برای کل سایت */
+html {
+  scroll-behavior: smooth;
+}
+
+/* برای مرورگرهای مختلف */
+* {
+  scroll-behavior: smooth;
+}
+
+/* اسکرول با سرعت بیشتر و نرم‌تر */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+/* اسکرول روان و آرام برای کل سایت */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* فاصله از بالای صفحه هنگام اسکرول به بخش‌ها */
+}
+
+/* برای اسکرول با انیمیشن نرم‌تر */
+* {
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+/* استایل اسکرول بار (اختیاری) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* انیمیشن برای ظاهر شدن بخش‌ها هنگام اسکرول */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* کلاس‌های کمکی برای انیمیشن */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-scale {
+  animation: fadeInScale 0.6s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.7s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.7s ease-out forwards;
+}

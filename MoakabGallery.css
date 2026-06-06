@@ -1,0 +1,185 @@
+/* MoakabGallery.css */
+.gallery-container {
+  width: 100%;
+  padding: 20px 0;
+  direction: rtl;
+  background: #0d0d1a;
+  font-family: 'Shoor', 'ShoorRounded', system-ui, -apple-system, sans-serif;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px 0 8px;
+  border-bottom: 2px solid #2e303a;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Shoor', 'ShoorRounded', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.gallery-see-all {
+  background: transparent;
+  border: 1px solid #2e303a;
+  padding: 6px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #ffff;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Shoor', 'ShoorRounded', sans-serif;
+}
+
+.gallery-see-all:hover {
+  background: rgba(192, 132, 252, 0.1);
+  transform: scale(1.05);
+}
+
+/* گرید گالری - ریسپانسیو */
+.gallery-grid {
+  display: grid;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* دسکتاپ بزرگ - 5 ستون */
+@media (min-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+/* دسکتاپ متوسط - 4 ستون */
+@media (min-width: 901px) and (max-width: 1199px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/* تبلت - 3 ستون */
+@media (min-width: 601px) and (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+/* موبایل - 2 ستون */
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    width: 92%;
+  }
+  
+  .gallery-title {
+    font-size: 18px;
+  }
+  
+  .gallery-see-all {
+    padding: 4px 12px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    gap: 12px;
+    width: 94%;
+  }
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #1a1a2e;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 20px;
+}
+
+.gallery-overlay svg {
+  color: white;
+}
+
+.gallery-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.gallery-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid #ffff;
+  padding: 10px 24px;
+  border-radius: 40px;
+  cursor: pointer;
+  color: #ffff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Shoor', 'ShoorRounded', sans-serif;
+}
+
+.gallery-more-btn:hover {
+  background: rgba(192, 132, 252, 0.15);
+  transform: scale(1.05);
+}
+
+.gallery-more-btn.close:hover {
+  background: rgba(192, 132, 252, 0.15);
+  transform: scale(1.05);
+}

@@ -1,0 +1,61 @@
+/* App.css */
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* حذف هر گونه استایل که ممکنه روی کارت‌ها تأثیر بذاره */
+.main-content * {
+  box-sizing: border-box;
+}
+/* برای اسکرول نرم به بخش‌ها */
+html {
+  scroll-behavior: smooth;
+}
+
+/* فضای خالی برای هدر fixed */
+#root {
+  padding-top: 100px;
+}
+
+/* برای اینکه هدر روی بخش‌ها سایه نیندازد */
+section {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 900px) {
+  #root {
+    padding-top: 85px;
+  }
+  section {
+    scroll-margin-top: 85px;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding-top: 75px;
+  }
+  section {
+    scroll-margin-top: 75px;
+  }
+}
+/* برای اسکرول نرم */
+html {
+  scroll-behavior: smooth;
+}
+
+/* فضای خالی برای هدر fixed */
+#root {
+  padding-top: 100px;
+}
+
+/* برای جلوگیری از تداخل هدر با بخش‌ها */
+#vaghaye, #zendegi, #help {
+  scroll-margin-top: 80px;
+}
